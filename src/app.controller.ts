@@ -2,8 +2,6 @@ import { Controller, Get, HttpException, HttpStatus, Param, Res, UseGuards, UseI
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBearerAuth, ApiParam, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
-import { existsSync } from 'fs';
-import { dirname, join } from 'path';
 
 @Controller()
 @ApiTags('Application')
