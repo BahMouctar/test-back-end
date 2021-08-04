@@ -20,8 +20,8 @@ export class Contribuable extends Document {
     @Prop()
     contact: string;
   
-    @Prop({default:"ENCOURS"})
-    statut: string;
+    @Prop({default:false})
+    statut: boolean;
 
 }
 

@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import {IsEmail, IsOptional, IsString } from 'class-validator';
+import {IsBoolean, IsEmail, IsOptional, IsString } from 'class-validator';
 
 export class ContribuableDto {
     
@@ -27,6 +27,6 @@ export class ContribuableDto {
     contact: string;
 
     @ApiProperty()
-    @IsString()
-    statut: string;
+    @IsBoolean()
+    statut: boolean;
 }
