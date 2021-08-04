@@ -24,8 +24,8 @@ export default () => ({
     },
 
     swagger : {
-        title: 'API PROJET FERROVIAIRE C2F',
-        description: 'API principal développé avec NESTJS pour la plateforme web C2F et son application mobile',
+        title: 'API EXERCICE',
+        description: 'API principal développé avec NESTJS',
         version: 'V.0.0.1',
         url: 'swagger-ui',
     }

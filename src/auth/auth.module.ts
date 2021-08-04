@@ -6,15 +6,13 @@ import { AuthController } from './controllers/auth.controller';
 import { AuthService } from './services/auth.service';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { ApplicationModule } from 'src/application/application.module';
-import { SettingsModule } from 'src/settings/settings.module';
 
 @Module({
     imports: [
         ApplicationModule,
-        SettingsModule,
         PassportModule.register({ defaultStrategy: 'jwt' }),
         JwtModule.register({
-            secret: 'topSecret51',
+            secret: 'toSecret001',
             signOptions: {
                 expiresIn: 86400,
             },

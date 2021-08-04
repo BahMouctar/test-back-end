@@ -46,7 +46,7 @@ export class AuthService {
         newUtilisateur.password = password;
         // Envoi de mail de confirmation
         utilisateur = await this.userService.save(newUtilisateur);
-        utilisateur = await this.sendActivationCode(utilisateur._id);
+        utilisateur = await this.sendActivationCode(utilisateur?._id);
         return utilisateur;
     }
 
@@ -92,7 +92,7 @@ export class AuthService {
 
                 Cordialement,
                 LIKE.ANTS`;
-                Mail.send(utilisateur.mail, "LIKE.ANT: Confirmation", content);
+                Mail.send(utilisateur.email, "LIKE.ANT: Confirmation", content);
 
                 //utilisateur.verification = { code: randomNumber(6), expiration:  moment(new Date()).format('YYYY-MM-DD[T00:00:00.000Z]') };
                 return this.userService.save(utilisateur);

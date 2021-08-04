@@ -18,7 +18,7 @@ export class SignupDto {
 
       @ApiProperty()
       @IsString()
-      phone:number;
+      phone:string;
 
       @ApiProperty()
       @IsEmail()
