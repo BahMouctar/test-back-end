@@ -27,6 +27,6 @@ export class ContribuableDto {
     contact: string;
 
     @ApiProperty()
-    @IsBoolean()
-    statut: boolean;
+    @IsString()
+    statut: string;
 }
