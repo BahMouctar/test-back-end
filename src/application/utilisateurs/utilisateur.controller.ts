@@ -12,8 +12,6 @@ import { UtilisateurService } from './utilisateur.service';
 @Catch()
 @UseInterceptors(LoggingInterceptor, TransformInterceptor)
 @Controller('utilisateur')
-@UseGuards(AuthGuard('jwt'))
-@ApiBearerAuth('jwt')
 @ApiTags('Utilisateur')
 export class UtilisateurController {
     constructor(private readonly userService: UtilisateurService) { }

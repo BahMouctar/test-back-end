@@ -14,8 +14,6 @@ import { ExpertComptableService } from './expert-comptable.service';
 @Catch()
 @UseInterceptors( LoggingInterceptor, TransformInterceptor)
 @Controller('expert-comptable')
-@UseGuards(AuthGuard('jwt')) //Concerne l'autorisation d'accéder à toute les ressources
-@ApiBearerAuth('jwt')
 @ApiTags('Expert Comptable')
 
 export class ExpertComptableController {

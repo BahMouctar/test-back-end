@@ -14,8 +14,6 @@ import { ContribuableService } from './contribuable.service';
 @Catch()
 @UseInterceptors( LoggingInterceptor, TransformInterceptor)
 @Controller('contribuable')
-@UseGuards(AuthGuard('jwt'))
-@ApiBearerAuth('jwt')
 @ApiTags('Contribuable')
 
 export class ContribuableController {
